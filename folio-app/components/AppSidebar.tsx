@@ -53,7 +53,7 @@ export default function AppSidebar() {
                                     >
                                         <Link
                                             href={item.url}
-                                            className='text-[1.2rem]'
+                                            className='text-[1.4rem]'
                                         >
                                             {item.icon}
                                             <span>{item.title}</span>
