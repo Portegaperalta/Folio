@@ -42,6 +42,8 @@
 }
 
 :root {
+  --clr-gray: #D4D4D4;
+  --clr-bg-dark: #131314;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -114,7 +116,12 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+body {
+  background-color: var(--clr-bg-dark);
 }
