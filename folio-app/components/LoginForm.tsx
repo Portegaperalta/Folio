@@ -16,6 +16,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { login } from "@/lib/auth-actions"
 import Link from "next/link"
+import LoginWithGoogleButton from "./LoginWithGoogleButton"
 
 export function LoginForm({
   className,
@@ -65,9 +66,7 @@ export function LoginForm({
                 <Button type="submit" formAction={login}>
                   Login
                 </Button>
-                <Button variant="outline" type="button">
-                  Login with Google
-                </Button>
+                <LoginWithGoogleButton />
                 <FieldDescription className="text-center">
                   Don&apos;t have an account?
                   <Link href="/signup">
