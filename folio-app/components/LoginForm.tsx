@@ -17,6 +17,7 @@ import { Input } from "@/components/ui/input"
 import { login } from "@/lib/auth-actions"
 import Link from "next/link"
 import LoginWithGoogleButton from "./LoginWithGoogleButton"
+import Image from "next/image"
 
 export function LoginForm({
   className,
@@ -25,10 +26,11 @@ export function LoginForm({
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card className="bg-(--clr-bg-ligh-dark) border-(--clr-border-dark)">
-        <CardHeader className="text-center">
+        <CardHeader className="text-center place-items-center">
+          <Image src="/folio-logo.png" alt="app logo" width={80} height={100} />
           <CardTitle className="text-(--clr-text-light) text-[1.1rem]">
             <h1>
-              Sign in to your Folio account
+              Sign in to your account
             </h1>
           </CardTitle>
         </CardHeader>
