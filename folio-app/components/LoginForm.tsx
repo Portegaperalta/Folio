@@ -51,7 +51,7 @@ export function LoginForm({
                   placeholder="m@example.com"
                   required
                   className="text-(--clr-text-light) border-(--clr-border-dark)
-                  py-5 bg-(--clr-bg-dark)"
+                  py-5 bg-(--clr-bg-dark) focus-visible:ring-(--clr-purple-light)"
                 />
               </Field>
               <Field>
@@ -76,7 +76,7 @@ export function LoginForm({
                   type="password"
                   required
                   className="text-(--clr-text-light) border-(--clr-border-dark)
-                  py-5 bg-(--clr-bg-dark)"
+                  py-5 bg-(--clr-bg-dark) focus-visible:ring-(--clr-purple-light)"
                 />
               </Field>
               <Field>
