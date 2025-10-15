@@ -24,20 +24,22 @@ export function LoginForm({
 }: React.ComponentProps<"div">) {
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
-      <Card>
-        <CardHeader>
-          <CardTitle>
-            Login to your account
+      <Card className="bg-(--clr-bg-ligh-dark) border-(--clr-border-dark)">
+        <CardHeader className="text-center">
+          <CardTitle className="text-(--clr-text-light) text-[1.1rem]">
+            <h1>
+              Sign in to your Folio account
+            </h1>
           </CardTitle>
-          <CardDescription>
-            Enter your email below to login to your account
-          </CardDescription>
         </CardHeader>
         <CardContent>
           <form>
-            <FieldGroup>
+            <FieldGroup className="space-y-2">
               <Field>
-                <FieldLabel htmlFor="email">
+                <FieldLabel
+                  htmlFor="email"
+                  className="text-(--clr-text-light) text-[1.1rem]"
+                >
                   Email
                 </FieldLabel>
                 <Input
@@ -46,30 +48,51 @@ export function LoginForm({
                   type="email"
                   placeholder="m@example.com"
                   required
+                  className="text-(--clr-text-light) border-(--clr-border-dark)
+                  py-5 bg-(--clr-bg-dark)"
                 />
               </Field>
               <Field>
                 <div className="flex items-center">
-                  <FieldLabel htmlFor="password">
+                  <FieldLabel
+                    htmlFor="password"
+                    className="text-(--clr-text-light) text-[1.1rem]"
+                  >
                     Password
                   </FieldLabel>
-                  <a
-                    href="#"
-                    className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
+                  <Link
+                    href="/login"
+                    className="text-(--clr-text-light) ml-auto inline-block
+                     text-sm underline-offset-4 hover:underline"
                   >
                     Forgot your password?
-                  </a>
+                  </Link>
                 </div>
-                <Input id="password" name="password" type="password" required />
+                <Input
+                  id="password"
+                  name="password"
+                  type="password"
+                  required
+                  className="text-(--clr-text-light) border-(--clr-border-dark)
+                  py-5 bg-(--clr-bg-dark)"
+                />
               </Field>
               <Field>
-                <Button type="submit" formAction={login}>
+                <Button
+                  type="submit"
+                  formAction={login}
+                  className="cursor-pointer bg-(--clr-purple-light)"
+                >
                   Login
                 </Button>
                 <LoginWithGoogleButton />
-                <FieldDescription className="text-center">
+                <FieldDescription className="text-(--clr-text-light) text-center
+                 flex justify-center gap-1">
                   Don&apos;t have an account?
-                  <Link href="/signup">
+                  <Link
+                    href="/signup"
+                    className="hover:text-(--clr-text-light)"
+                  >
                     Sign up
                   </Link>
                 </FieldDescription>
