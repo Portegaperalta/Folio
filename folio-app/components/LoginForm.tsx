@@ -83,7 +83,7 @@ export function LoginForm({
                 <Button
                   type="submit"
                   formAction={login}
-                  className="cursor-pointer bg-(--clr-purple-light)"
+                  className="cursor-pointer bg-(--clr-purple-light) hover:bg-(--clr-purple-light-hover)"
                 >
                   Login
                 </Button>
