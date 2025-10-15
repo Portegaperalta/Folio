@@ -30,7 +30,7 @@ export function LoginForm({
           <Image src="/folio-logo.png" alt="app logo" width={80} height={100} />
           <CardTitle className="text-(--clr-text-light) text-[1.1rem]">
             <h1>
-              Sign in to your account
+              Sign in to Folio
             </h1>
           </CardTitle>
         </CardHeader>
