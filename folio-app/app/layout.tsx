@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { Sidebar } from "lucide-react";
 import { Roboto } from "next/font/google";
 import "./globals.css";
+import AppSidebar from "@/components/AppSidebar";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -18,11 +21,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={roboto.variable}>
-      <body className={`${roboto.className}`}
-      >
-        <main className="px-4">
-          {children}
-        </main>
+      <body className={`${roboto.className}`}>
+        <SidebarProvider>
+          <AppSidebar />
+          <main className="px-4">
+            <SidebarTrigger />
+            {children}
+          </main>
+        </SidebarProvider>
       </body>
     </html>
   );
