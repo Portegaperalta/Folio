@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className={`${roboto.className}`}>
         <SidebarProvider>
           <AppSidebar />
-          <main className="px-4">
+          <main className="px-4 py-4">
             <SidebarTrigger />
             {children}
           </main>
