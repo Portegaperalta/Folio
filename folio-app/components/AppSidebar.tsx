@@ -1,4 +1,4 @@
-import { House, Folder, Settings, ChevronUp, User2 } from "lucide-react"
+import { Folder, ChevronUp, User2, Plus } from "lucide-react"
 
 import {
   DropdownMenu,
@@ -24,27 +24,9 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarFooter,
+  SidebarGroupAction,
 } from "@/components/ui/sidebar"
 import Link from "next/link"
-import { title } from "process"
-
-const items = [
-  {
-    title: "Home",
-    url: "/",
-    icon: <House color="#F4F4F5" />,
-  },
-  {
-    title: "My Folders",
-    url: "/bookmarks",
-    icon: <Folder color="#F4F4F5" />,
-  },
-  {
-    title: "Settings",
-    url: "/settings",
-    icon: <Settings color="#F4F4F5" />,
-  }
-]
 
 export default function AppSidebar() {
   return (
@@ -59,23 +41,35 @@ export default function AppSidebar() {
           </SidebarGroupLabel>
           <SidebarGroupContent className="px-4">
             <SidebarMenu className="space-y-2">
-              {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild
-                    className="py-6 hover:bg-(--clr-purple-light) 
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild
+                  className="py-6 hover:bg-(--clr-purple-light) 
                     active:bg-(--clr-purple-light)"
-                  >
-                    <Link href={item.url}>
-                      {item.icon}
-                      <span className="text-(--clr-text-light) text-[1.1rem] lg:text-[1rem]">
-                        {item.title}
-                      </span>
-                    </Link>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
+                >
+                  <Link href="/">
+                    <Folder color="#F4F4F5" />
+                    <span className="text-(--clr-text-light) text-[1.1rem] lg:text-[1rem]">
+                      All Folders
+                    </span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
+        </SidebarGroup>
+        <SidebarGroup className="space-y-6 px-0">
+          <SidebarGroupLabel className="text-(--clr-text-light) 
+          text-[1rem] px-4">
+            <p>
+              Folders
+            </p>
+          </SidebarGroupLabel>
+          <SidebarGroupAction
+            title="Add Folder"
+            className="hover:bg-(--clr-purple-light) cursor-pointer"
+          >
+            <Plus color="#F4F4F5" />
+          </SidebarGroupAction>
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter className="bg-(--clr-bg-light-dark)">
