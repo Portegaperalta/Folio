@@ -67,7 +67,7 @@ export default function AppSidebar() {
                   >
                     <Link href={item.url}>
                       {item.icon}
-                      <span className="text-(--clr-text-light)">
+                      <span className="text-(--clr-text-light) text-[1.1rem] lg:text-[1rem]">
                         {item.title}
                       </span>
                     </Link>
