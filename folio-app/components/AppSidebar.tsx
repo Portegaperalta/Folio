@@ -14,12 +14,12 @@ import Link from "next/link"
 
 const items = [
   {
-    title: "All Folders",
+    title: "Home",
     url: "/",
     icon: <House color="#F4F4F5" />,
   },
   {
-    title: "My Bookmarks",
+    title: "My Folders",
     url: "/bookmarks",
     icon: <Folder color="#F4F4F5" />,
   },
@@ -32,10 +32,11 @@ const items = [
 
 export default function AppSidebar() {
   return (
-    <Sidebar>
+    <Sidebar className="border-r-(--clr-border-dark)">
       <SidebarContent className="bg-(--clr-bg-ligh-dark)">
-        <SidebarGroup className="space-y-10">
-          <SidebarGroupLabel className="text-(--clr-text-light) text-[1.6rem]">
+        <SidebarGroup className="space-y-6">
+          <SidebarGroupLabel className="text-(--clr-purple-light) text-[1.6rem]
+          py-6 border-b-1 rounded-none border-(--clr-border-dark)">
             <Link href="/">
               Folio
             </Link>
