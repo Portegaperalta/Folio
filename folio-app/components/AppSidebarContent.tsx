@@ -25,7 +25,7 @@ export default function AppSidebarContent() {
           <SidebarMenu className="space-y-2">
             <SidebarMenuItem>
               <SidebarMenuButton asChild
-                className="py-6 bg-(--clr-bg-lighter-dark) 
+                className="py-5 bg-(--clr-bg-lighter-dark) 
                 hover:bg-(--clr-bg-lighter-dark-hover)"
               >
                 <Link href="/">
