@@ -34,14 +34,14 @@ export default function AppSidebar() {
   return (
     <Sidebar className="border-r-(--clr-border-dark)">
       <SidebarContent className="bg-(--clr-bg-ligh-dark)">
-        <SidebarGroup className="space-y-6">
+        <SidebarGroup className="space-y-6 px-0">
           <SidebarGroupLabel className="text-(--clr-purple-light) text-[1.6rem]
-          py-6 border-b-1 rounded-none border-(--clr-border-dark)">
+          py-6 px-4 border-b-1 rounded-none border-(--clr-border-dark)">
             <Link href="/">
               Folio
             </Link>
           </SidebarGroupLabel>
-          <SidebarGroupContent>
+          <SidebarGroupContent className="px-4">
             <SidebarMenu className="space-y-2">
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
