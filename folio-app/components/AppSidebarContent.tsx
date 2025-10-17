@@ -30,7 +30,7 @@ export default function AppSidebarContent() {
               >
                 <Link href="/">
                   <Folder color="#F4F4F5" />
-                  <span className="text-(--clr-text-light) text-[1.1rem] lg:text-[1rem]">
+                  <span className="text-(--clr-text-light) text-[1rem]">
                     All Folders
                   </span>
                 </Link>
