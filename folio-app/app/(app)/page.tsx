@@ -2,11 +2,6 @@ export default function Home() {
   return (
     <div className="home pt-4">
       <div className="home-content flex flex-col gap-30">
-        <div className="recently-visited">
-          <h2 className="text-(--clr-text-light) text-[2rem] font-[500]">
-            Recently Visited
-          </h2>
-        </div>
         <div className="all-bookmarks">
           <h2 className="text-(--clr-text-light) text-[2rem] font-[500]">
             All Bookmarks
