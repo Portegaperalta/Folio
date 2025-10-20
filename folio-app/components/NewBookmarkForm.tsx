@@ -32,7 +32,8 @@ export default function NewBookmarkForm() {
       action="#"
       id="newBookmarkForm"
       className={`px-6 py-4 bg-(--clr-bg-light-dark) w-full max-w-120
-      rounded-lg border-1 border-(--clr-border-dark)`}
+      rounded-lg border-1 border-(--clr-border-dark) absolute top-1/2
+      left-1/2 -translate-x-1/2 translate-y-1/4`}
     >
       <FieldSet>
         <div className="form-top text-(--clr-text-light) flex items-center justify-between">
