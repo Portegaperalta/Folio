@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import { Roboto } from "next/font/google";
 import "../globals.css";
 import AppSidebar from "@/components/AppSidebar";
@@ -23,10 +23,12 @@ export default function RootLayout({
       <body className={`${roboto.className}`}>
         <SidebarProvider>
           <AppSidebar />
-          <main className="px-4 py-4">
-            <SidebarTrigger />
-            {children}
-          </main>
+          <SidebarInset className="bg-(--clr-bg-dark)">
+            <main className="px-4 py-4">
+              <SidebarTrigger />
+              {children}
+            </main>
+          </SidebarInset>
         </SidebarProvider>
       </body>
     </html>
