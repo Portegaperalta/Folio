@@ -3,7 +3,7 @@ import NewBookmarkForm from "@/components/NewBookmarkForm";
 
 export default function Home() {
   return (
-    <div className="home pt-4">
+    <div className="home pt-4 relative">
       <div className="home-content flex flex-col gap-30">
         <div className="home-top flex flex-row items-center justify-between">
           <div className="home-title">
