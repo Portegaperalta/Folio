@@ -16,7 +16,7 @@ export default function Home() {
           </div>
           <AddBookmarkButton />
         </div>
-        <NewBookmarkForm />
+        <NewBookmarkForm isAddBookmarkButtonClicked={false} />
       </div>
     </div>
   );

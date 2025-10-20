@@ -1,9 +1,8 @@
 "use client"
 
-import { X } from "lucide-react"
+import { Type, X } from "lucide-react"
 import {
   Field,
-  FieldTitle,
   FieldGroup,
   FieldLabel,
   FieldSet,
@@ -11,7 +10,6 @@ import {
 import {
   Select,
   SelectContent,
-  SelectGroup,
   SelectItem,
   SelectTrigger,
   SelectValue,
@@ -20,11 +18,15 @@ import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 import React, { useState } from "react"
 
-export default function NewBookmarkForm() {
+type NewBookmarkFormProps = {
+  isAddBookmarkButtonClicked: boolean
+}
+
+export default function NewBookmarkForm({ isAddBookmarkButtonClicked }: NewBookmarkFormProps) {
   const [isFormVisible, setIsFormVisible] = useState<boolean>(false);
 
-  const handleFormDisplay = () => {
-    setIsFormVisible(!isFormVisible);
+  const handleQuitFormButton = () => {
+    setIsFormVisible(false);
   }
 
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -38,7 +40,7 @@ export default function NewBookmarkForm() {
       onSubmit={handleFormSubmit}
       className={`px-6 py-4 bg-(--clr-bg-light-dark) w-full max-w-120
       rounded-lg border-1 border-(--clr-border-dark) absolute top-1/2
-      left-1/2 -translate-x-1/2 translate-y-1/4`}
+      left-1/2 -translate-x-1/2 translate-y-1/4 ${isFormVisible ? `inline-block` : `hidden`}`}
     >
       <FieldSet>
         <div className="form-top text-(--clr-text-light) flex items-center 
@@ -46,7 +48,7 @@ export default function NewBookmarkForm() {
           <h3 className="text-[1.2rem]">Add New Bookmark</h3>
           <Button
             type="button"
-            onClick={handleFormDisplay}
+            onClick={handleQuitFormButton}
             className="quit-form-button text-(--clr-gray-text) bg-transparent 
             hover:text-(--clr-text-light) hover:bg-transparent cursor-pointer">
             <X />
