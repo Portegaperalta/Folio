@@ -18,7 +18,7 @@ import {
 } from '@/components/ui/select'
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
-import { useState } from "react"
+import React, { useState } from "react"
 
 export default function NewBookmarkForm() {
   const [isFormVisible, setIsFormVisible] = useState<boolean>(false);
@@ -27,10 +27,15 @@ export default function NewBookmarkForm() {
     setIsFormVisible(!isFormVisible);
   }
 
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  }
+
   return (
     <form
       action="#"
       id="newBookmarkForm"
+      onSubmit={handleFormSubmit}
       className={`px-6 py-4 bg-(--clr-bg-light-dark) w-full max-w-120
       rounded-lg border-1 border-(--clr-border-dark) absolute top-1/2
       left-1/2 -translate-x-1/2 translate-y-1/4`}
