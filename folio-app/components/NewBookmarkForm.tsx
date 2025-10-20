@@ -36,13 +36,16 @@ export default function NewBookmarkForm() {
       left-1/2 -translate-x-1/2 translate-y-1/4`}
     >
       <FieldSet>
-        <div className="form-top text-(--clr-text-light) flex items-center justify-between">
+        <div className="form-top text-(--clr-text-light) flex items-center 
+        justify-between">
           <h3 className="text-[1.2rem]">Add New Bookmark</h3>
-          <div
+          <Button
+            type="button"
             onClick={handleFormDisplay}
-            className="quit-form-button cursor-pointer">
+            className="quit-form-button text-(--clr-gray-text) bg-transparent 
+            hover:text-(--clr-text-light) hover:bg-transparent cursor-pointer">
             <X />
-          </div>
+          </Button>
         </div>
         <FieldGroup>
           <Field>
