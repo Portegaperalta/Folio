@@ -1,4 +1,5 @@
 import AddBookmarkButton from "@/components/AddBookmarkButton";
+import NewBookmarkForm from "@/components/NewBookmarkForm";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
           </div>
           <AddBookmarkButton />
         </div>
+        <NewBookmarkForm />
       </div>
     </div>
   );
