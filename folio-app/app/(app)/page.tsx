@@ -19,7 +19,7 @@ export default function Home() {
               0 Bookmarks
             </p>
           </div>
-          <AddBookmarkButton />
+          <AddBookmarkButton setIsBookmarkFormVisible={setIsBookmarkFormVisible} />
         </div>
         <NewBookmarkForm
           isBookmarkFormVisible={isBookmarkFormVisible}
