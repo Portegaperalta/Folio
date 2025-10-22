@@ -79,6 +79,7 @@ export default function NewBookmarkForm(
             <Input
               id="title"
               type="text"
+              value={bookmarkTitle}
               placeholder="My Favorite Website"
               required
               onChange={handleTitleInput}
@@ -96,6 +97,7 @@ export default function NewBookmarkForm(
             <Input
               id="url"
               type="url"
+              value={bookmarkURL}
               placeholder="https://example.com"
               required
               onChange={handleURLInput}
