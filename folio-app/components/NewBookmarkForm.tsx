@@ -16,17 +16,20 @@ import {
 } from '@/components/ui/select'
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
-import React, { useState } from "react"
+import { Dispatch, SetStateAction } from "react"
 
 type NewBookmarkFormProps = {
-  isAddBookmarkButtonClicked: boolean
+  isBookmarkFormVisible: boolean,
+  setIsBookmarkFormVisible: Dispatch<SetStateAction<boolean>>,
 }
 
-export default function NewBookmarkForm({ isAddBookmarkButtonClicked }: NewBookmarkFormProps) {
-  const [isFormVisible, setIsFormVisible] = useState<boolean>(false);
+export default function NewBookmarkForm(
+  { isBookmarkFormVisible,
+    setIsBookmarkFormVisible
+  }: NewBookmarkFormProps) {
 
-  const handleQuitFormButton = () => {
-    setIsFormVisible(false);
+  const quitForm = () => {
+    setIsBookmarkFormVisible(false);
   }
 
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -40,7 +43,7 @@ export default function NewBookmarkForm({ isAddBookmarkButtonClicked }: NewBookm
       onSubmit={handleFormSubmit}
       className={`px-6 py-4 bg-(--clr-bg-light-dark) w-full max-w-120
       rounded-lg border-1 border-(--clr-border-dark) absolute top-1/2
-      left-1/2 -translate-x-1/2 translate-y-1/4 ${isFormVisible ? `inline-block` : `hidden`}`}
+      left-1/2 -translate-x-1/2 translate-y-1/4 ${isBookmarkFormVisible ? `inline-block` : `hidden`}`}
     >
       <FieldSet>
         <div className="form-top text-(--clr-text-light) flex items-center 
@@ -48,7 +51,7 @@ export default function NewBookmarkForm({ isAddBookmarkButtonClicked }: NewBookm
           <h3 className="text-[1.2rem]">Add New Bookmark</h3>
           <Button
             type="button"
-            onClick={handleQuitFormButton}
+            onClick={quitForm}
             className="quit-form-button text-(--clr-gray-text) bg-transparent 
             hover:text-(--clr-text-light) hover:bg-transparent cursor-pointer">
             <X />
