@@ -1,7 +1,12 @@
+"use client"
+
 import AddBookmarkButton from "@/components/AddBookmarkButton";
 import NewBookmarkForm from "@/components/NewBookmarkForm";
+import { useState } from "react";
 
 export default function Home() {
+  const [isBookmarkFormVisible, setIsBookmarkFormVisible] = useState<boolean>(true)
+
   return (
     <div className="home pt-4 relative">
       <div className="home-content flex flex-col gap-30">
@@ -14,9 +19,11 @@ export default function Home() {
               0 Bookmarks
             </p>
           </div>
-          <AddBookmarkButton />
+          <AddBookmarkButton setIsBookmarkFormVisible={setIsBookmarkFormVisible} />
         </div>
-        <NewBookmarkForm isAddBookmarkButtonClicked={false} />
+        <NewBookmarkForm
+          isBookmarkFormVisible={isBookmarkFormVisible}
+          setIsBookmarkFormVisible={setIsBookmarkFormVisible} />
       </div>
     </div>
   );
