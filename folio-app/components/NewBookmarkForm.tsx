@@ -1,6 +1,6 @@
 "use client"
 
-import { Type, X } from "lucide-react"
+import { X } from "lucide-react"
 import {
   Field,
   FieldGroup,
@@ -16,7 +16,7 @@ import {
 } from '@/components/ui/select'
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
-import { Dispatch, SetStateAction } from "react"
+import React, { Dispatch, SetStateAction, useEffect, useState } from "react"
 
 type NewBookmarkFormProps = {
   isBookmarkFormVisible: boolean,
@@ -27,6 +27,17 @@ export default function NewBookmarkForm(
   { isBookmarkFormVisible,
     setIsBookmarkFormVisible
   }: NewBookmarkFormProps) {
+
+  const [bookmarkTitle, setBookmarkTitle] = useState<string>("");
+  const [bookmarkURL, setBookmarkURL] = useState<string>("");
+
+  const handleTitleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setBookmarkTitle(e.target.value);
+  }
+
+  const handleURLInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setBookmarkURL(e.target.value);
+  }
 
   const quitForm = () => {
     setIsBookmarkFormVisible(false);
@@ -70,6 +81,7 @@ export default function NewBookmarkForm(
               type="text"
               placeholder="My Favorite Website"
               required
+              onChange={handleTitleInput}
               className="text-(--clr-text-light) border-(--clr-border-dark)
               py-5 bg-(--clr-bg-dark) focus-visible:ring-(--clr-purple-light)"
             />
@@ -86,6 +98,7 @@ export default function NewBookmarkForm(
               type="url"
               placeholder="https://example.com"
               required
+              onChange={handleURLInput}
               className="text-(--clr-text-light) border-(--clr-border-dark)
               py-5 bg-(--clr-bg-dark) focus-visible:ring-(--clr-purple-light)"
             />
