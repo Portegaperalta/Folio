@@ -40,6 +40,8 @@ export default function NewBookmarkForm(
   }
 
   const quitForm = () => {
+    setBookmarkTitle("");
+    setBookmarkURL("");
     setIsBookmarkFormVisible(false);
   }
 
