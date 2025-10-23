@@ -5,7 +5,7 @@ import NewBookmarkForm from "@/components/NewBookmarkForm";
 import { useState } from "react";
 
 export default function Home() {
-  const [isBookmarkFormVisible, setIsBookmarkFormVisible] = useState<boolean>(true)
+  const [isBookmarkFormVisible, setIsBookmarkFormVisible] = useState<boolean>(false)
 
   return (
     <div className="home pt-4 relative">
