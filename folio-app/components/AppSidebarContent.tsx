@@ -1,4 +1,4 @@
-import { Folder, Plus } from "lucide-react"
+import { Folder } from "lucide-react"
 import {
   SidebarContent,
   SidebarGroup,
@@ -7,9 +7,9 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarGroupAction,
 } from "@/components/ui/sidebar"
 import Link from "next/link"
+import CreateFolderButton from "./CreateFolderButton"
 
 export default function AppSidebarContent() {
   return (
@@ -39,19 +39,14 @@ export default function AppSidebarContent() {
           </SidebarMenu>
         </SidebarGroupContent>
       </SidebarGroup>
-      <SidebarGroup className="space-y-6 px-0">
+      <SidebarGroup className="flex flex-row justify-between space-y-6">
         <SidebarGroupLabel className="text-(--clr-text-light) 
           text-[1rem] px-4">
           <p>
             Folders
           </p>
         </SidebarGroupLabel>
-        <SidebarGroupAction
-          title="Add Folder"
-          className="hover:bg-(--clr-purple-light) cursor-pointer"
-        >
-          <Plus color="#F4F4F5" />
-        </SidebarGroupAction>
+        <CreateFolderButton />
       </SidebarGroup>
     </SidebarContent>
   )

@@ -1,11 +1,13 @@
 "use client"
 
 import AddBookmarkButton from "@/components/AddBookmarkButton";
+import CreateFolderForm from "@/components/CreateFolderForm";
 import NewBookmarkForm from "@/components/NewBookmarkForm";
 import { useState } from "react";
 
 export default function Home() {
-  const [isBookmarkFormVisible, setIsBookmarkFormVisible] = useState<boolean>(true)
+  const [isBookmarkFormVisible, setIsBookmarkFormVisible] = useState<boolean>(false);
+  const [isFolderFormVisible, setIsFolderFormVisible] = useState<boolean>(false);
 
   return (
     <div className="home pt-4 relative">
@@ -24,6 +26,10 @@ export default function Home() {
         <NewBookmarkForm
           isBookmarkFormVisible={isBookmarkFormVisible}
           setIsBookmarkFormVisible={setIsBookmarkFormVisible} />
+        <CreateFolderForm
+          isFolderFormVisible={isFolderFormVisible}
+          setIsFolderFormVisible={setIsFolderFormVisible}
+        />
       </div>
     </div>
   );
