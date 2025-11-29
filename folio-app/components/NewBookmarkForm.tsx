@@ -47,6 +47,7 @@ export default function NewBookmarkForm(
 
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    quitForm();
   }
 
   return (
