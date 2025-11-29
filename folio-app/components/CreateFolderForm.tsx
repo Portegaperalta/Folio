@@ -74,6 +74,7 @@ export default function CreateFolderForm({
               placeholder="Work, Personal, etc."
               required
               onChange={handleNameInput}
+              autoComplete="off"
               className="text-(--clr-text-light) border-(--clr-border-dark)
               rounded-lg py-5 bg-(--clr-bg-dark) focus-visible:ring-(--clr-purple-light)"
             />
