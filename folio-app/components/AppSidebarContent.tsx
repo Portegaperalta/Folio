@@ -1,3 +1,6 @@
+'use client'
+
+import { useState } from "react"
 import { Folder } from "lucide-react"
 import {
   SidebarContent,
@@ -10,8 +13,11 @@ import {
 } from "@/components/ui/sidebar"
 import Link from "next/link"
 import CreateFolderButton from "./CreateFolderButton"
+import CreateFolderForm from "./CreateFolderForm"
 
 export default function AppSidebarContent() {
+  const [isFolderFormVisible, setIsFolderFormVisible] = useState<boolean>(false);
+
   return (
     <SidebarContent className="bg-(--clr-bg-light-dark)">
       <SidebarGroup className="space-y-6 px-0">
@@ -46,7 +52,11 @@ export default function AppSidebarContent() {
             Folders
           </p>
         </SidebarGroupLabel>
-        <CreateFolderButton />
+        <CreateFolderButton setIsFolderFormVisible={setIsFolderFormVisible} />
+        <CreateFolderForm
+          isFolderFormVisible={isFolderFormVisible}
+          setIsFolderFormVisible={setIsFolderFormVisible}
+        />
       </SidebarGroup>
     </SidebarContent>
   )
