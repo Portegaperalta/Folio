@@ -32,6 +32,7 @@ export default function CreateFolderForm({
 
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    quitForm();
   }
 
   return (
