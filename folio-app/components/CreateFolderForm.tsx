@@ -40,8 +40,8 @@ export default function CreateFolderForm({
       id="createFolderForm"
       onSubmit={handleFormSubmit}
       className={`px-6 py-4 bg-(--clr-bg-light-dark) rounded-lg
-      border-1 border-(--clr-border-dark) w-full max-w-120 absolute 
-      top-1/2 left-1/2 -translate-x-1/2 translate-y-1/2 ${isFolderFormVisible ? `inline-block` : `hidden`}`}
+      border-1 border-(--clr-border-dark) w-full max-w-120 absolute
+      left-1/2 -translate-x-1/2 translate-y-1/5 ${isFolderFormVisible ? `inline-block` : `hidden`}`}
     >
       <FieldSet>
         <div className="form-top flex items-center justify-between">
