@@ -14,6 +14,7 @@ import {
 import Link from "next/link"
 import CreateFolderButton from "./CreateFolderButton"
 import CreateFolderForm from "./CreateFolderForm"
+import FoldersList from "./FoldersList"
 
 export default function AppSidebarContent() {
   const [isFolderFormVisible, setIsFolderFormVisible] = useState<boolean>(false);
@@ -52,11 +53,16 @@ export default function AppSidebarContent() {
             Folders
           </p>
         </SidebarGroupLabel>
-        <CreateFolderButton setIsFolderFormVisible={setIsFolderFormVisible} />
+        <CreateFolderButton
+          setIsFolderFormVisible={setIsFolderFormVisible}
+        />
         <CreateFolderForm
           isFolderFormVisible={isFolderFormVisible}
           setIsFolderFormVisible={setIsFolderFormVisible}
         />
+      </SidebarGroup>
+      <SidebarGroup className="px-4">
+        <FoldersList />
       </SidebarGroup>
     </SidebarContent>
   )
