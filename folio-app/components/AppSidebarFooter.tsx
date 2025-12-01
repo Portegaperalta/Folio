@@ -1,5 +1,10 @@
 import { ChevronUp, User2 } from "lucide-react"
-import { SidebarFooter, SidebarMenu, SidebarMenuItem, SidebarMenuButton } from "./ui/sidebar"
+import {
+  SidebarFooter,
+  SidebarMenu,
+  SidebarMenuItem,
+  SidebarMenuButton
+} from "./ui/sidebar"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -29,7 +34,7 @@ export default function AppSidebarFooter() {
               <SidebarMenuButton className="text-(--clr-text-light) 
                 hover:text-(--clr-text-light) hover:bg-(--clr-bg-light-dark)">
                 <User2 />
-                <p>Pablo E.</p>
+                <p>Username</p>
                 <ChevronUp className="ml-auto" />
               </SidebarMenuButton>
             </DropdownMenuTrigger>
