@@ -52,6 +52,7 @@
   --clr-border-dark: #313135;
   --clr-purple-light: #9868E5;
   --clr-purple-light-hover: #7e56be;
+  --clr-purple-dark-bg: #342B45;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
