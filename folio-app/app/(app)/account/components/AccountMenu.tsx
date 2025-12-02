@@ -116,9 +116,6 @@ export default function AccountMenu() {
                 <LogOut />
                 Log Out
               </div>
-              <div className="logout-link-right">
-                <ChevronRight />
-              </div>
             </Link>
           </li>
         </ul>
