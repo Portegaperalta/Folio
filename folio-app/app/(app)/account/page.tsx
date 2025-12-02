@@ -1,6 +1,7 @@
 import { ArrowLeft } from "lucide-react";
 import { User } from "lucide-react";
 import Link from "next/link";
+import AccountMenu from "./components/AccountMenu";
 
 export default function Account() {
   return (
@@ -24,6 +25,7 @@ export default function Account() {
             </div>
           </div>
         </div>
+        <AccountMenu />
       </div>
     </div>
   )
