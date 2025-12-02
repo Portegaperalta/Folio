@@ -11,7 +11,8 @@ import Link from "next/link";
 
 export default function AccountMenu() {
   return (
-    <div className="account-menu flex flex-col gap-10">
+    <div className="account-menu flex flex-col gap-10 w-full md:max-w-120 
+    md:mx-auto lg:max-w-140">
       <div className="account">
         <h2 className="text-(--clr-text-light) text-[1.4rem] pb-6">
           Account
@@ -19,7 +20,7 @@ export default function AccountMenu() {
         <ul className="account-links">
           <li className="edit-profile-link">
             <Link
-              href="/edit"
+              href="/edit-profile"
               className="text-(--clr-text-light) text-[1.2rem] flex flex-row 
               items-center justify-between"
             >
