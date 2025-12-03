@@ -14,10 +14,10 @@ export default function Home() {
         <div className="home-top flex flex-row items-center justify-between">
           <div className="home-title">
             <h2 className="text-(--clr-text-light) text-[1.4rem] font-[500] md:text-[2rem]">
-              All Bookmarks
+              All Folders
             </h2>
             <p className="text-(--clr-gray-text)">
-              0 Bookmarks
+              0 Folders
             </p>
           </div>
           <AddBookmarkButton setIsBookmarkFormVisible={setIsBookmarkFormVisible} />
