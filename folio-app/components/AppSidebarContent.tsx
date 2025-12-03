@@ -1,6 +1,6 @@
 'use client'
 
-import { Folder } from "lucide-react"
+import { Folder, House } from "lucide-react"
 import {
   SidebarContent,
   SidebarGroup,
@@ -12,6 +12,19 @@ import {
 } from "@/components/ui/sidebar"
 import Link from "next/link"
 import FoldersList from "./FoldersList"
+
+const sidebarItems = [
+  {
+    name: "Home",
+    href: "/",
+    icon: <House color="#F4F4F5" />,
+  },
+  {
+    name: "All Folders",
+    href: "/all-folders",
+    icon: <Folder color="#F4F4F5" />,
+  },
+]
 
 export default function AppSidebarContent() {
   return (
@@ -25,19 +38,23 @@ export default function AppSidebarContent() {
         </SidebarGroupLabel>
         <SidebarGroupContent className="px-4">
           <SidebarMenu className="space-y-2">
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild
-                className="py-5 bg-(--clr-bg-lighter-dark) 
+            {
+              sidebarItems.map((item) => (
+                <SidebarMenuItem key={item.name}>
+                  <SidebarMenuButton asChild
+                    className="py-5 bg-(--clr-bg-lighter-dark) 
                 hover:bg-(--clr-bg-lighter-dark-hover) active:bg-(--clr-bg-lighter-dark-hover)"
-              >
-                <Link href="/">
-                  <Folder color="#F4F4F5" />
-                  <span className="text-(--clr-text-light) text-[1rem]">
-                    All Folders
-                  </span>
-                </Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
+                  >
+                    <Link href={item.href}>
+                      {item.icon}
+                      <span className="text-(--clr-text-light) text-[1rem]">
+                        {item.name}
+                      </span>
+                    </Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))
+            }
           </SidebarMenu>
         </SidebarGroupContent>
       </SidebarGroup>
