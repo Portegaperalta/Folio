@@ -11,7 +11,7 @@ export default function Account() {
           <Link
             href="/"
             className="p-2 text-(--clr-text-light) flex flex-row
-            gap-2 rounded-md hover:bg-(--clr-purple-light)"
+            gap-2 rounded-md"
           >
             <ArrowLeft />
             Back to Home
