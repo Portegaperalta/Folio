@@ -43,18 +43,18 @@ export default function AppSidebarFooter() {
               className="w-[--radix-popper-anchor-width] 
                 bg-(--clr-bg-light-dark) border-(--clr-border-dark)"
             >
-              <DropdownMenuItem className="text-(--clr-text-light) 
+              <Link href="/account">
+                <DropdownMenuItem className="text-(--clr-text-light) 
                 cursor-pointer hover:bg-(--clr-purple-light)">
-                <Link href="/account">
-                  Account
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem className="text-(--clr-text-light)
+                  <p>Account</p>
+                </DropdownMenuItem>
+              </Link>
+              <Link href="/logout">
+                <DropdownMenuItem className="text-(--clr-text-light)
                  cursor-pointer hover:bg-(--clr-purple-light)">
-                <Link href="/logout">
-                  Log out
-                </Link>
-              </DropdownMenuItem>
+                  <p>Log out</p>
+                </DropdownMenuItem>
+              </Link>
             </DropdownMenuContent>
           </DropdownMenu>
         </SidebarMenuItem>
