@@ -23,10 +23,11 @@ export default function CreateFolderButton({
         size="sm"
         title="Create New Folder"
         onClick={displayFolderForm}
-        className="text-(--clr-text-light) bg-transparent rounded-lg
-        hover:bg-(--clr-purple-light) cursor-pointer"
+        className="text-(--clr-text-light) p-5 bg-(--clr-purple-light) rounded-lg
+        hover:bg-(--clr-purple-light-hover) cursor-pointer"
       >
         <Plus />
+        Create New Folder
       </Button>
     </div>
   )
