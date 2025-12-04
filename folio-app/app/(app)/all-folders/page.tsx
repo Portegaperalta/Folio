@@ -9,6 +9,10 @@ export default function AllFolders() {
 
   return (
     <div className="all-folders pt-4">
+      {/*dark overlay*/}
+      {isFolderFormVisible && (
+        <div className="fixed inset-0 bg-black/60 z-40"></div>
+      )}
       <div className="all-folders-content">
         <div className="all-folders-top flex items-center justify-between">
           <div className="title">
