@@ -1,11 +1,13 @@
 "use client"
 
+import AddBookmarkButton from "@/components/AddBookmarkButton";
 import React, { useState } from "react";
 
 export default function FolderDetails({ params }:
   { params: Promise<{ folderName: string }> }) {
 
   const { folderName } = React.use(params);
+  const [isBookmarkFormVisible, setIsBookmarkFormVisible] = useState<boolean>(false);
 
   return (
     <div className="folder-details">
@@ -23,7 +25,7 @@ export default function FolderDetails({ params }:
         </div>
         <div className="folder-details-actions">
           <div className="add-bookmark">
-
+            <AddBookmarkButton setIsBookmarkFormVisible={setIsBookmarkFormVisible} />
           </div>
         </div>
       </div>
