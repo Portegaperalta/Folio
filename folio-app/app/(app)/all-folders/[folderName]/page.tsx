@@ -1,10 +1,11 @@
-import AddBookmarkButton from "@/components/AddBookmarkButton";
+"use client"
 
-export default async function FolderDetails({ params }: {
-  params: Promise<{ folderName: string }>;
-}) {
+import React, { useState } from "react";
 
-  const folderName = (await params).folderName;
+export default function FolderDetails({ params }:
+  { params: Promise<{ folderName: string }> }) {
+
+  const { folderName } = React.use(params);
 
   return (
     <div className="folder-details">
