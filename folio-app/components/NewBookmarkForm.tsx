@@ -111,7 +111,7 @@ export default function NewBookmarkForm(
           <Field>
             <FieldLabel
               className="text-(--clr-text-light) text-[1rem]">
-              Folder (Optional)
+              Folder
             </FieldLabel>
             <Select>
               <SelectTrigger className="text-(--clr-text-light) 
@@ -135,7 +135,7 @@ export default function NewBookmarkForm(
             <Button
               type="submit"
               className="text-(--clr-text-light) bg-(--clr-purple-light) 
-          hover:bg-(--clr-purple-light-hover) cursor-pointer"
+              hover:bg-(--clr-purple-light-hover) cursor-pointer"
             >
               Add Bookmark
             </Button>
