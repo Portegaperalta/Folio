@@ -1,5 +1,6 @@
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
+import EditProfileForm from "./components/EditProfileForm"
 
 export default function EditProfile() {
   return (
@@ -15,8 +16,7 @@ export default function EditProfile() {
             Back to Account
           </Link>
         </div>
-        <div className="edit-profile-form">
-        </div>
+        <EditProfileForm />
       </div>
     </div>
   )
