@@ -1,8 +1,22 @@
+"use client"
+
 import { Field, FieldGroup, FieldLabel, FieldSet } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
 import { Camera } from "lucide-react"
+import React, { useState } from "react"
 
 export default function EditProfileForm() {
+  const [newDisplayName, setNewDisplayName] = useState<string>("");
+  const [newBio, setNewBio] = useState<string>("");
+
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setNewDisplayName(e.target.value);
+  }
+
+  const handleBioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setNewBio(e.target.value);
+  }
+
   return (
     <form className="edit-profile-form pt-4 flex flex-col gap-20">
       <div className="profile-images relative">
@@ -37,11 +51,18 @@ export default function EditProfileForm() {
                 id="displayName"
                 type="text"
                 required
+                onChange={handleNameChange}
+                value={newDisplayName}
                 maxLength={50}
                 autoComplete="off"
                 className="text-(--clr-text-light) border-t-0 border-l-0
                  border-r-0 rounded-none focus-visible:ring-0"
               />
+              <div className="input-word-counter flex flex-row justify-end">
+                <p className="text-(--clr-text-light)">
+                  {`${newDisplayName.length}/50`}
+                </p>
+              </div>
             </Field>
             <Field>
               <FieldLabel
@@ -54,10 +75,17 @@ export default function EditProfileForm() {
                 id="bio"
                 type="text"
                 maxLength={500}
+                onChange={handleBioChange}
+                value={newBio}
                 autoComplete="off"
                 className="text-(--clr-text-light) border-t-0 border-l-0
                  border-r-0 rounded-none focus-visible:ring-0"
               />
+              <div className="input-word-counter flex flex-row justify-end">
+                <p className="text-(--clr-text-light)">
+                  {`${newBio.length}/500`}
+                </p>
+              </div>
             </Field>
           </FieldGroup>
         </FieldSet>
