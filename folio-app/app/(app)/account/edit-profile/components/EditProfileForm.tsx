@@ -1,8 +1,10 @@
+import { Field, FieldGroup, FieldLabel, FieldSet } from "@/components/ui/field"
+import { Input } from "@/components/ui/input"
 import { Camera } from "lucide-react"
 
 export default function EditProfileForm() {
   return (
-    <form className="edit-profile-form pt-4">
+    <form className="edit-profile-form pt-4 flex flex-col gap-20">
       <div className="profile-images relative">
         <div className="profile-banner pt-26 pb-4 px-4 bg-(--clr-gray) flex flex-row justify-end">
           <div
@@ -22,7 +24,43 @@ export default function EditProfileForm() {
         </div>
       </div>
       <div className="profile-info">
-
+        <FieldSet>
+          <FieldGroup>
+            <Field>
+              <FieldLabel
+                htmlFor="displayName"
+                className="text-(--clr-text-light) text-[1.2rem] font-normal"
+              >
+                Display Name
+              </FieldLabel>
+              <Input
+                id="displayName"
+                type="text"
+                required
+                maxLength={50}
+                autoComplete="off"
+                className="text-(--clr-text-light) border-t-0 border-l-0
+                 border-r-0 rounded-none focus-visible:ring-0"
+              />
+            </Field>
+            <Field>
+              <FieldLabel
+                htmlFor="bio"
+                className="text-(--clr-text-light) text-[1.2rem] font-normal"
+              >
+                Bio
+              </FieldLabel>
+              <Input
+                id="bio"
+                type="text"
+                maxLength={500}
+                autoComplete="off"
+                className="text-(--clr-text-light) border-t-0 border-l-0
+                 border-r-0 rounded-none focus-visible:ring-0"
+              />
+            </Field>
+          </FieldGroup>
+        </FieldSet>
       </div>
     </form>
   )
