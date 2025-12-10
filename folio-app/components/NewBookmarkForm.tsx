@@ -110,29 +110,6 @@ export default function NewBookmarkForm(
             />
           </Field>
           <Field>
-            <FieldLabel
-              className="text-(--clr-text-light) text-[1rem]">
-              Folder
-            </FieldLabel>
-            <Select>
-              <SelectTrigger className="text-(--clr-text-light) 
-              border-(--clr-border-dark) py-5 bg-(--clr-bg-dark) 
-              focus-visible:ring-(--clr-purple-light) cursor-pointer">
-                <SelectValue placeholder="Select a folder" />
-              </SelectTrigger>
-              <SelectContent className="bg-(--clr-bg-light-dark) 
-              border-(--clr-border-dark)">
-                <SelectItem
-                  value="No folder"
-                  className="text-(--clr-text-light) bg-(--clr-bg-light-dark)
-                  hover:bg-(--clr-purple-light)"
-                >
-                  No Folder
-                </SelectItem>
-              </SelectContent>
-            </Select>
-          </Field>
-          <Field>
             <Button
               type="submit"
               className="text-(--clr-text-light) bg-(--clr-purple-light) 
