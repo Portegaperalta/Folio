@@ -7,13 +7,6 @@ import {
   FieldLabel,
   FieldSet,
 } from "@/components/ui/field"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select'
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react"
@@ -57,7 +50,8 @@ export default function NewBookmarkForm(
       onSubmit={handleFormSubmit}
       className={`px-6 py-4 bg-(--clr-bg-light-dark) w-full max-w-120
       rounded-lg border-1 border-(--clr-border-dark) absolute top-1/2
-      left-1/2 -translate-x-1/2 translate-y-1/4 ${isBookmarkFormVisible ? `inline-block` : `hidden`}`}
+      left-1/2 -translate-x-1/2 translate-y-1/4 ${isBookmarkFormVisible ? `inline-block` : `hidden`}
+      z-100`}
     >
       <FieldSet>
         <div className="form-top text-(--clr-text-light) flex items-center 
@@ -107,29 +101,6 @@ export default function NewBookmarkForm(
               className="text-(--clr-text-light) border-(--clr-border-dark)
               py-5 bg-(--clr-bg-dark) focus-visible:ring-(--clr-purple-light)"
             />
-          </Field>
-          <Field>
-            <FieldLabel
-              className="text-(--clr-text-light) text-[1rem]">
-              Folder
-            </FieldLabel>
-            <Select>
-              <SelectTrigger className="text-(--clr-text-light) 
-              border-(--clr-border-dark) py-5 bg-(--clr-bg-dark) 
-              focus-visible:ring-(--clr-purple-light) cursor-pointer">
-                <SelectValue placeholder="Select a folder" />
-              </SelectTrigger>
-              <SelectContent className="bg-(--clr-bg-light-dark) 
-              border-(--clr-border-dark)">
-                <SelectItem
-                  value="No folder"
-                  className="text-(--clr-text-light) bg-(--clr-bg-light-dark)
-                  hover:bg-(--clr-purple-light)"
-                >
-                  No Folder
-                </SelectItem>
-              </SelectContent>
-            </Select>
           </Field>
           <Field>
             <Button

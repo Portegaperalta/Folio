@@ -41,7 +41,7 @@ export default function CreateFolderForm({
       id="createFolderForm"
       onSubmit={handleFormSubmit}
       className={`px-6 py-4 bg-(--clr-bg-light-dark) rounded-lg
-      border-1 border-(--clr-border-dark) w-full max-w-120 absolute
+      border-1 border-(--clr-border-dark) w-full max-w-90 md:max-w-110 absolute
       left-1/2 -translate-x-1/2 translate-y-1/5 ${isFolderFormVisible ? `inline-block` : `hidden`}
       z-100`}
     >

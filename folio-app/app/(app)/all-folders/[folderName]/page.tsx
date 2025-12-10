@@ -12,6 +12,10 @@ export default function FolderDetails({ params }:
 
   return (
     <div className="folder-details relative">
+      {/*dark overlay*/}
+      {isBookmarkFormVisible && (
+        <div className="fixed inset-0 bg-black/60 z-40"></div>
+      )}
       <div className="folder-details-top flex items-center justify-between">
         <div className="folder-title">
           <h2 className="text-(--clr-text-light) text-[1.4rem]
