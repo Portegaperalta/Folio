@@ -18,7 +18,8 @@ export default function EditProfileForm() {
   }
 
   return (
-    <form className="edit-profile-form pt-4 flex flex-col gap-20">
+    <form className="edit-profile-form pt-4 flex flex-col gap-20
+     w-full md:max-w-164 lg:max-w-240 md:mx-auto">
       <div className="profile-images relative">
         <div className="profile-banner pt-26 pb-4 px-4 bg-(--clr-gray) flex flex-row justify-end">
           <div
