@@ -13,7 +13,7 @@ export default function AllFolders() {
       {isFolderFormVisible && (
         <div className="fixed inset-0 bg-black/60 z-40"></div>
       )}
-      <div className="all-folders-content">
+      <div className="all-folders-content space-y-10">
         <div className="all-folders-top flex items-center justify-between">
           <div className="title">
             <h2 className="text-(--clr-text-light) text-[1.4rem]
