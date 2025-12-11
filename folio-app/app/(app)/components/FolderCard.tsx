@@ -4,12 +4,12 @@ import { Folder } from "lucide-react";
 
 type FolderCardProps = {
   folderName: string,
-  href: string,
+  slug: string,
 }
 
-export default function FolderCard({ folderName, href }: FolderCardProps) {
+export default function FolderCard({ folderName, slug }: FolderCardProps) {
   return (
-    <Link href={href}>
+    <Link href={`/all-folders/${slug}`}>
       <Card className="w-full max-w-36 bg-transparent border-(--clr-border-dark)">
         <CardContent className="space-y-2">
           <div className="card-logo flex justify-center">

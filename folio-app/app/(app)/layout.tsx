@@ -3,6 +3,7 @@ import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/s
 import { Roboto } from "next/font/google";
 import "../globals.css";
 import AppSidebar from "@/components/AppSidebar";
+import MobileNavbar from "./components/MobileNavbar";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -30,6 +31,7 @@ export default function RootLayout({
             </main>
           </SidebarInset>
         </SidebarProvider>
+        <MobileNavbar />
       </body>
     </html>
   );
