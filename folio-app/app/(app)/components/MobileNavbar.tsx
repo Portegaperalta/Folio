@@ -25,10 +25,6 @@ const navItems = [
 export default function MobileNavbar() {
   const [isActive, setIsActive] = useState<string>("");
 
-  const handleItemClick = (e: React.MouseEvent<HTMLLIElement>) => {
-
-  }
-
   return (
     <div className="mobile-navbar py-4 w-full bg-(--clr-bg-light-dark)
      fixed bottom-0 z-50 border-t-1 border-(--clr-border-dark) md:hidden">
