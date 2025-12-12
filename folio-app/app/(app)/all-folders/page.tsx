@@ -30,7 +30,8 @@ export default function AllFolders() {
           isFolderFormVisible={isFolderFormVisible}
           setIsFolderFormVisible={setIsFolderFormVisible}
         />
-        <div className="all-folders-list"></div>
+        <div className="all-folders-list grid grid-flow-row grid-cols-2
+         md:grid-cols-3 lg:grid-cols-6 gap-y-8"></div>
       </div>
     </div>
   )
