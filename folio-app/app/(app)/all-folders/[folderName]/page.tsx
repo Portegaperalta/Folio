@@ -11,7 +11,7 @@ export default function FolderDetails({ params }:
   const [isBookmarkFormVisible, setIsBookmarkFormVisible] = useState<boolean>(false);
 
   return (
-    <div className="folder-details relative">
+    <div className="folder-details pt-4 relative">
       {/*dark overlay*/}
       {isBookmarkFormVisible && (
         <div className="fixed inset-0 bg-black/60 z-40"></div>
