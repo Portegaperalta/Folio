@@ -14,7 +14,6 @@ import {
   FieldLabel,
 } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
-import { login } from "@/lib/auth-actions"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -81,7 +80,6 @@ export function LoginForm({
               <Field>
                 <Button
                   type="submit"
-                  formAction={login}
                   className="cursor-pointer bg-(--clr-purple-light) hover:bg-(--clr-purple-light-hover)"
                 >
                   Login
