@@ -1,6 +1,6 @@
 import { Sidebar } from "@/components/ui/sidebar"
 import AppSidebarFooter from "./AppSidebarFooter"
-import AppSidebarContent from "./AppSidebarContent"
+import AppSidebarContent from "../../(app)/components/AppSidebarContent"
 
 export default function AppSidebar() {
   return (
