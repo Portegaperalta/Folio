@@ -19,7 +19,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { FormEvent, useState } from "react"
 import { useRouter } from "next/navigation"
-import { Login } from "@/app/(auth)/utils/Login"
+import { login } from "@/app/(auth)/utils/Login"
 
 export function LoginForm({
   className,
@@ -39,7 +39,7 @@ export function LoginForm({
     setMessage("");
 
     try {
-      const response = await Login({ Email: email, Password: password });
+      const response = await login({ Email: email, Password: password });
       setMessage(response.message || "Login Successful");
       router.push("/");
     } catch (err) {
