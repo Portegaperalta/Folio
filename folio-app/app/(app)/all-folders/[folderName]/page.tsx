@@ -1,7 +1,7 @@
 "use client"
 
 import NewBookmarkForm from "@/components/NewBookmarkForm";
-import AddBookmarkButton from "@/components/AddBookmarkButton";
+import AddBookmarkButton from "@/app/(app)/components/ui/AddBookmarkButton";
 import React, { useState } from "react";
 
 export default function FolderDetails({ params }:
@@ -19,7 +19,7 @@ export default function FolderDetails({ params }:
       <div className="folder-details-top flex items-center justify-between">
         <div className="folder-title">
           <h2 className="text-(--clr-text-light) text-[1.4rem]
-           font-[500] md:text-[2rem]">
+           font-medium md:text-[2rem]">
             {folderName}
           </h2>
           <div className="bookmark-count">
