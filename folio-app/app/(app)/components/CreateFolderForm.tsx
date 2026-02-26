@@ -41,14 +41,14 @@ export default function CreateFolderForm({
       id="createFolderForm"
       onSubmit={handleFormSubmit}
       className={`px-6 py-4 bg-(--clr-bg-light-dark) rounded-lg
-      border-1 border-(--clr-border-dark) w-full max-w-90 md:max-w-110 absolute
+      border border-(--clr-border-dark) w-full max-w-90 md:max-w-110 absolute
       left-1/2 -translate-x-1/2 translate-y-1/5 ${isFolderFormVisible ? `inline-block` : `hidden`}
       z-100`}
     >
       <FieldSet>
         <div className="form-top flex items-center justify-between">
           <div className="form-top-text">
-            <h3 className="text-(--clr-text-light) text-[1.2rem] font-[500]">
+            <h3 className="text-(--clr-text-light) text-[1.2rem] font-medium">
               Create New Folder
             </h3>
           </div>

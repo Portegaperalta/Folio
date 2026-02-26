@@ -1,6 +1,6 @@
 "use client"
 
-import NewBookmarkForm from "@/components/NewBookmarkForm";
+import NewBookmarkForm from "@/app/(app)/components/NewBookmarkForm";
 import AddBookmarkButton from "@/app/(app)/components/ui/AddBookmarkButton";
 import React, { useState } from "react";
 
