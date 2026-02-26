@@ -114,13 +114,6 @@ export default function SignupForm({ ...props }: React.ComponentProps<typeof Car
                 >
                   Create Account
                 </Button>
-                <Button
-                  variant="outline"
-                  type="button"
-                  className="cursor-pointer"
-                >
-                  Sign up with Google
-                </Button>
                 <FieldDescription className="text-(--clr-text-light) px-6 text-center">
                   Already have an account?
                   <Link href="/login">Sign in</Link>
