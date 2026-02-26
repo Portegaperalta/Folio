@@ -1,7 +1,7 @@
 "use client"
 
 import { Plus } from "lucide-react"
-import { Button } from "./ui/button"
+import { Button } from "../../../../components/ui/button"
 import { Dispatch, SetStateAction } from "react"
 
 type CreateFolderButtonProps = {
