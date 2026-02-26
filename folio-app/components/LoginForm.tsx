@@ -14,9 +14,7 @@ import {
   FieldLabel,
 } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
-import { login } from "@/lib/auth-actions"
 import Link from "next/link"
-import LoginWithGoogleButton from "./LoginWithGoogleButton"
 import Image from "next/image"
 
 export function LoginForm({
@@ -82,12 +80,10 @@ export function LoginForm({
               <Field>
                 <Button
                   type="submit"
-                  formAction={login}
                   className="cursor-pointer bg-(--clr-purple-light) hover:bg-(--clr-purple-light-hover)"
                 >
                   Login
                 </Button>
-                <LoginWithGoogleButton />
                 <FieldDescription className="text-(--clr-text-light) text-center
                  flex justify-center gap-1">
                   Don&apos;t have an account?

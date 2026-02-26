@@ -13,7 +13,6 @@ import {
   FieldLabel,
 } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
-import { signup } from "@/lib/auth-actions"
 import Link from "next/link"
 
 export default function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
@@ -111,17 +110,9 @@ export default function SignupForm({ ...props }: React.ComponentProps<typeof Car
               <Field>
                 <Button
                   type="submit"
-                  formAction={signup}
                   className="cursor-pointer bg-(--clr-purple-light) hover:bg-(--clr-purple-light-hover)"
                 >
                   Create Account
-                </Button>
-                <Button
-                  variant="outline"
-                  type="button"
-                  className="cursor-pointer"
-                >
-                  Sign up with Google
                 </Button>
                 <FieldDescription className="text-(--clr-text-light) px-6 text-center">
                   Already have an account?

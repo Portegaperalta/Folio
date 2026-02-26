@@ -31,7 +31,7 @@ export default function AppSidebarContent() {
     <SidebarContent className="bg-(--clr-bg-light-dark)">
       <SidebarGroup className="space-y-6 px-0">
         <SidebarGroupLabel className="text-(--clr-purple-light) text-[1.6rem]
-          py-6 px-4 border-b-1 rounded-none border-(--clr-border-dark)">
+          py-6 px-4 border-b rounded-none border-(--clr-border-dark)">
           <Link href="/">
             Folio
           </Link>

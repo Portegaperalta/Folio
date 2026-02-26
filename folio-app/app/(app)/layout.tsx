@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import { Roboto } from "next/font/google";
 import "../globals.css";
-import AppSidebar from "@/components/AppSidebar";
+import AppSidebar from "@/app/(app)/components/AppSidebar";
 import MobileNavbar from "./components/MobileNavbar";
 
 const roboto = Roboto({
