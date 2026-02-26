@@ -1,7 +1,19 @@
-import { type NextRequest } from 'next/server'
+import { type NextRequest, NextResponse } from 'next/server'
 
 export async function proxy(request: NextRequest) {
+  const { pathname } = request.nextUrl
+  const token = request.cookies.get("auth-token")?.value
 
+  const publicPaths = ["/login", "/signup", "/logout", "/error"]
+  const isPublicPath = publicPaths.some((path) => pathname.startsWith(path))
+
+  if (!token && !isPublicPath) {
+    const loginUrl = new URL("/login", request.url)
+    loginUrl.searchParams.set("redirect", pathname)
+    return NextResponse.redirect(loginUrl)
+  }
+
+  return NextResponse.next()
 }
 
 export const config = {
