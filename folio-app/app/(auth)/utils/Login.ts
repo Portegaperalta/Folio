@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios, { AxiosError } from 'axios'
 
 export type LoginCredentialsDTO = {
   Email: string,
@@ -12,7 +12,7 @@ export type LoginResponse = {
 const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
 const apiLoginUrl = `${apiBaseUrl}/auth/login`;
 
-export async function Login({ Email, Password }: LoginCredentialsDTO): Promise<LoginResponse> {
+export async function login({ Email, Password }: LoginCredentialsDTO): Promise<LoginResponse> {
 
   if (!apiBaseUrl) {
     throw new Error("Missing API base url");
@@ -24,7 +24,10 @@ export async function Login({ Email, Password }: LoginCredentialsDTO): Promise<L
     return response.data;
   }
   catch (error) {
-    console.log(`Login request failed: ${error}`);
+    if (error instanceof AxiosError) {
+      throw new Error(error.response?.data || "Login Request Failed")
+    }
+    console.error(`Login request failed: ${error}`);
     throw error;
   }
 }
