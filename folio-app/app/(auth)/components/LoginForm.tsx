@@ -133,7 +133,7 @@ export function LoginForm({
                 ) : null}
                 {error ? (
                   <FieldDescription className="text-red-400 text-center">
-                    {error}
+                    Login failed, try again later
                   </FieldDescription>
                 ) : null}
                 <FieldDescription className="text-(--clr-text-light) text-center
