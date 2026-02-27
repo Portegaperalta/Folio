@@ -1,4 +1,5 @@
-import axios, { AxiosError } from 'axios'
+import api from '@/lib/api';
+import { AxiosError } from 'axios'
 
 export type LoginCredentialsDTO = {
   Email: string,
@@ -9,18 +10,10 @@ export type LoginResponse = {
   message: string
 };
 
-const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
-const apiLoginUrl = `${apiBaseUrl}/auth/login`;
-
 export async function login({ Email, Password }: LoginCredentialsDTO): Promise<LoginResponse> {
 
-  if (!apiBaseUrl) {
-    throw new Error("Missing API base url");
-  }
-
   try {
-    const response = await axios.post(apiLoginUrl, { Email, Password }, { withCredentials: true });
-
+    const response = await api.post("/auth/login", { Email, Password });
     return response.data;
   }
   catch (error) {
@@ -31,4 +24,3 @@ export async function login({ Email, Password }: LoginCredentialsDTO): Promise<L
     throw error;
   }
 }
-
