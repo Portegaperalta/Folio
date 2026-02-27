@@ -5,7 +5,7 @@ const foldersUrl = `/folders`;
 
 export async function GetFolders(paginationDto: PaginationDTO) {
   const response = await api.get(foldersUrl);
-  return response.data;
+  return response;
 }
 
 export async function GetFolder(folderId: string) {
