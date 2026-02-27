@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from "react";
-import CreateFolderButton from "@/components/CreateFolderButton";
-import CreateFolderForm from "@/components/CreateFolderForm";
+import CreateFolderButton from "@/app/(app)/components/ui/CreateFolderButton";
+import CreateFolderForm from "@/app/(app)/components/CreateFolderForm";
 
 export default function AllFolders() {
   const [isFolderFormVisible, setIsFolderFormVisible] = useState<boolean>(false);
@@ -17,7 +17,7 @@ export default function AllFolders() {
         <div className="all-folders-top flex items-center justify-between">
           <div className="title">
             <h2 className="text-(--clr-text-light) text-[1.4rem]
-           font-[500] md:text-[2rem]">
+           font-medium md:text-[2rem]">
               All Folders
             </h2>
             <p className="text-(--clr-gray-text)">

@@ -7,8 +7,8 @@ import {
   FieldLabel,
   FieldSet,
 } from "@/components/ui/field"
-import { Button } from "./ui/button"
-import { Input } from "./ui/input"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react"
 
 type NewBookmarkFormProps = {
@@ -49,7 +49,7 @@ export default function NewBookmarkForm(
       id="newBookmarkForm"
       onSubmit={handleFormSubmit}
       className={`px-6 py-4 bg-(--clr-bg-light-dark) w-full max-w-120
-      rounded-lg border-1 border-(--clr-border-dark) absolute top-1/2
+      rounded-lg border border-(--clr-border-dark) absolute top-1/2
       left-1/2 -translate-x-1/2 translate-y-1/4 ${isBookmarkFormVisible ? `inline-block` : `hidden`}
       z-100`}
     >
