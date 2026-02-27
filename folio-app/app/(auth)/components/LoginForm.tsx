@@ -58,7 +58,11 @@ export function LoginForm({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card className="bg-(--clr-bg-ligh-dark) border-(--clr-border-dark)">
         <CardHeader className="text-center place-items-center">
-          <Image src="/folio-logo.svg" alt="app logo" width={80} height={100} />
+          <Image
+            src="/folio-logo.svg"
+            alt="app logo" width={80}
+            height={100}
+          />
           <CardTitle className="text-(--clr-text-light) text-[1.1rem]">
             <h1>
               Sign in to Folio
@@ -114,7 +118,7 @@ export function LoginForm({
                   py-5 bg-(--clr-bg-dark) focus-visible:ring-(--clr-purple-light)"
                 />
               </Field>
-              <Field>
+              <Field className="space-y-4">
                 <Button
                   type="submit"
                   disabled={isSubmitting}
