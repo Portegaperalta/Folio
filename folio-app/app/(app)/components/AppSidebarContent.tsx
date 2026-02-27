@@ -11,7 +11,6 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import Link from "next/link"
-import FoldersList from "./FoldersList"
 
 const sidebarItems = [
   {
