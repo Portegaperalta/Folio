@@ -2,7 +2,7 @@ import { type NextRequest, NextResponse } from 'next/server'
 
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
-  const token = request.cookies.get("auth-token")?.value
+  const token = request.cookies.get("auth_token")?.value
 
   const publicPaths = ["/login", "/signup", "/logout", "/error"]
   const isPublicPath = publicPaths.some((path) => pathname.startsWith(path))
