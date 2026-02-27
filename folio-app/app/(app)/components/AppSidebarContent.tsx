@@ -58,14 +58,6 @@ export default function AppSidebarContent() {
           </SidebarMenu>
         </SidebarGroupContent>
       </SidebarGroup>
-      <SidebarGroup className="flex flex-row justify-between space-y-6">
-        <SidebarGroupLabel className="text-(--clr-text-light) 
-          text-[1rem] px-4">
-          <p>
-            Folders
-          </p>
-        </SidebarGroupLabel>
-      </SidebarGroup>
       <SidebarGroup className="px-4">
         <FoldersList />
       </SidebarGroup>
