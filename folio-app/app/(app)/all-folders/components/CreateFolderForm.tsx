@@ -5,8 +5,8 @@ import {
   FieldLabel,
   FieldSet,
 } from "@/components/ui/field"
-import { Input } from "../../../components/ui/input"
-import { Button } from "../../../components/ui/button"
+import { Input } from "../../../../components/ui/input"
+import { Button } from "../../../../components/ui/button"
 import React, { Dispatch, SetStateAction, useState } from "react"
 
 type CreateFolderFormProps = {
