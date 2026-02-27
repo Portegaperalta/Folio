@@ -1,8 +1,6 @@
 import {
   ChevronRight,
-  User,
-  CircleQuestionMark,
-  CircleAlert,
+  UserRoundX,
   Mail,
   KeyRound,
   LogOut,
@@ -45,6 +43,18 @@ export default function AccountMenu() {
               </div>
               <div className="change-password-link-right">
                 <ChevronRight />
+              </div>
+            </Link>
+          </li>
+          <li className="delete-account-link">
+            <Link
+              href="/delete-account"
+              className="text-(--clr-text-light) text-[1.2rem] 
+              flex flex-row items-center justify-between"
+            >
+              <div className="delete-account-link-left flex gap-4">
+                <UserRoundX />
+                Delete Account
               </div>
             </Link>
           </li>
