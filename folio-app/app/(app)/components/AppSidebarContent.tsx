@@ -58,9 +58,6 @@ export default function AppSidebarContent() {
           </SidebarMenu>
         </SidebarGroupContent>
       </SidebarGroup>
-      <SidebarGroup className="px-4">
-        <FoldersList />
-      </SidebarGroup>
     </SidebarContent>
   )
 }
