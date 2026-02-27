@@ -35,43 +35,6 @@ export default function AccountMenu() {
           </li>
         </ul>
       </div>
-      <div className="support">
-        <h2 className="text-(--clr-text-light) text-[1.4rem] pb-6">
-          Support
-        </h2>
-        <ul className="support-links flex flex-col gap-8">
-          <li className="help-link">
-            <Link
-              href="/help"
-              className="text-(--clr-text-light) text-[1.2rem] flex flex-row 
-              items-center justify-between"
-            >
-              <div className="help-link-left flex gap-4">
-                <CircleQuestionMark />
-                Help & Support
-              </div>
-              <div className="help-link-right">
-                <ChevronRight />
-              </div>
-            </Link>
-          </li>
-          <li className="terms-link">
-            <Link
-              href="/terms"
-              className="text-(--clr-text-light) text-[1.2rem] 
-              flex flex-row items-center justify-between"
-            >
-              <div className="terms-link-left flex gap-4">
-                <CircleAlert />
-                Terms and Policies
-              </div>
-              <div className="terms-link-right">
-                <ChevronRight />
-              </div>
-            </Link>
-          </li>
-        </ul>
-      </div>
       <div className="actions">
         <h2 className="text-(--clr-text-light) text-[1.4rem] pb-6">
           Actions
