@@ -16,6 +16,7 @@ export type RegisterCredentialsDTO = {
 }
 
 export type FolderDTO = {
+  id: string,
   name: string,
   isMarkedFavorite: boolean,
   creationDate: Date,
