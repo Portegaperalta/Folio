@@ -1,19 +1,20 @@
 import { type NextRequest, NextResponse } from 'next/server'
 
+const publicRoutes = ["/login", "/signup"]
+
 export async function proxy(request: NextRequest) {
-  const { pathname } = request.nextUrl
-  const token = request.cookies.get("auth_token")?.value
+  const authToken = request.cookies.get("auth_token")?.value;
+  const { pathname } = request.nextUrl;
 
-  const publicPaths = ["/login", "/signup", "/logout", "/error"]
-  const isPublicPath = publicPaths.some((path) => pathname.startsWith(path))
-
-  if (!token && !isPublicPath) {
-    const loginUrl = new URL("/login", request.url)
-    loginUrl.searchParams.set("redirect", pathname)
-    return NextResponse.redirect(loginUrl)
+  if (publicRoutes.some((route) => pathname.startsWith(route))) {
+    return NextResponse.next();
   }
 
-  return NextResponse.next()
+  if (!authToken) {
+    return NextResponse.redirect(new URL("/login", request.url));
+  }
+
+  return NextResponse.next();
 }
 
 export const config = {
@@ -25,6 +26,6 @@ export const config = {
      * - favicon.ico (favicon file)
      * Feel free to modify this pattern to include more paths.
      */
-    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+    '/((?!api|_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
   ],
 }

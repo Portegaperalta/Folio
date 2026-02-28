@@ -20,7 +20,7 @@ export default function Account() {
             <div className="p-4 rounded-full bg-(--clr-purple-dark-bg)">
               <User color="#9868E5" size={50} />
             </div>
-            <div className="text-(--clr-text-light) text-[1.4rem] font-[500]">
+            <div className="text-(--clr-text-light) text-[1.4rem] font-medium">
               <p>John Doe</p>
             </div>
           </div>

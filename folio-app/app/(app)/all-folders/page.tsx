@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from "react";
-import CreateFolderButton from "@/app/(app)/components/ui/CreateFolderButton";
-import CreateFolderForm from "@/app/(app)/components/CreateFolderForm";
+import CreateFolderButton from "@/app/(app)/all-folders/components/CreateFolderButton";
+import CreateFolderForm from "@/app/(app)/all-folders/components/CreateFolderForm";
 
 export default function AllFolders() {
   const [isFolderFormVisible, setIsFolderFormVisible] = useState<boolean>(false);
