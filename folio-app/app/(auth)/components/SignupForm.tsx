@@ -97,10 +97,6 @@ export default function SignupForm({ ...props }: React.ComponentProps<typeof Car
                 className="text-(--clr-text-light) border-(--clr-border-dark)
                   py-5 bg-(--clr-bg-dark) focus-visible:ring-(--clr-purple-light)"
               />
-              <FieldDescription>
-                We&apos;ll use this to contact you. We will not share your email
-                with anyone else.
-              </FieldDescription>
             </Field>
             <Field>
               <FieldLabel
@@ -120,25 +116,6 @@ export default function SignupForm({ ...props }: React.ComponentProps<typeof Car
               />
               <FieldDescription>
                 Must be at least 8 characters long.
-              </FieldDescription>
-            </Field>
-            <Field>
-              <FieldLabel
-                htmlFor="confirm-password"
-                className="text-(--clr-text-light)"
-              >
-                Confirm Password
-              </FieldLabel>
-              <Input
-                id="confirm-password"
-                name="confirm-password"
-                type="password"
-                required
-                className="text-(--clr-text-light) border-(--clr-border-dark)
-                  py-5 bg-(--clr-bg-dark) focus-visible:ring-(--clr-purple-light)"
-              />
-              <FieldDescription>
-                Please confirm your password.
               </FieldDescription>
             </Field>
             <FieldGroup>
