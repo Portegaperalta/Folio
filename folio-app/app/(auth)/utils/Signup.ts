@@ -5,7 +5,7 @@ export async function Signup({ name,
   email, password, phoneNumber }: RegisterCredentialsDTO):
   Promise<RegisterResponse> {
   try {
-    let response = await api.post("/auth/register");
+    let response = await api.post("/auth/register", { name, email, password, phoneNumber });
     return response.data;
   }
   catch (error) {
