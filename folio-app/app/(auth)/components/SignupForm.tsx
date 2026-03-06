@@ -91,7 +91,6 @@ export default function SignupForm({ ...props }: React.ComponentProps<typeof Car
                 id="email"
                 name="email"
                 type="email"
-                placeholder="m@example.com"
                 value={email}
                 required
                 className="text-(--clr-text-light) border-(--clr-border-dark)
@@ -114,9 +113,6 @@ export default function SignupForm({ ...props }: React.ComponentProps<typeof Car
                 className="text-(--clr-text-light) border-(--clr-border-dark)
                   py-5 bg-(--clr-bg-dark) focus-visible:ring-(--clr-purple-light)"
               />
-              <FieldDescription>
-                Must be at least 8 characters long.
-              </FieldDescription>
             </Field>
             <FieldGroup>
               <Field>
@@ -124,7 +120,7 @@ export default function SignupForm({ ...props }: React.ComponentProps<typeof Car
                   type="submit"
                   className="cursor-pointer bg-(--clr-purple-light) hover:bg-(--clr-purple-light-hover)"
                 >
-                  Create Account
+                  Sign Up
                 </Button>
                 <FieldDescription className="text-(--clr-text-light) px-6 text-center">
                   Already have an account?
