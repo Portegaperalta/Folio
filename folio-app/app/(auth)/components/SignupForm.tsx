@@ -121,13 +121,18 @@ export default function SignupForm({ ...props }: React.ComponentProps<typeof Car
               />
             </Field>
             <FieldGroup>
-              <Field>
+              <Field className="space-y-4">
                 <Button
                   type="submit"
                   className="cursor-pointer bg-(--clr-purple-light) hover:bg-(--clr-purple-light-hover)"
                 >
-                  Sign Up
+                  {isSubmitting ? "Signing Up..." : "Sign Up"}
                 </Button>
+                {error ? (
+                  <FieldDescription className="text-red-400 text-center">
+                    Login failed
+                  </FieldDescription>
+                ) : null}
                 <FieldDescription className="text-(--clr-text-light) px-6 text-center">
                   Already have an account?
                   <Link href="/login" className="text-(--clr-purple-light) ml-1.5">
