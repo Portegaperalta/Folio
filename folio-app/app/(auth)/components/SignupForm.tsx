@@ -61,7 +61,7 @@ export default function SignupForm({ ...props }: React.ComponentProps<typeof Car
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <form>
+        <form onSubmit={handleSubmit}>
           <FieldGroup>
             <Field>
               <FieldLabel
@@ -74,6 +74,7 @@ export default function SignupForm({ ...props }: React.ComponentProps<typeof Car
                 id="name"
                 name="name"
                 type="text"
+                value={fullName}
                 required
                 className="text-(--clr-text-light) border-(--clr-border-dark)
                   py-5 bg-(--clr-bg-dark) focus-visible:ring-(--clr-purple-light)"
@@ -91,6 +92,7 @@ export default function SignupForm({ ...props }: React.ComponentProps<typeof Car
                 name="email"
                 type="email"
                 placeholder="m@example.com"
+                value={email}
                 required
                 className="text-(--clr-text-light) border-(--clr-border-dark)
                   py-5 bg-(--clr-bg-dark) focus-visible:ring-(--clr-purple-light)"
@@ -111,6 +113,7 @@ export default function SignupForm({ ...props }: React.ComponentProps<typeof Car
                 id="password"
                 name="password"
                 type="password"
+                value={password}
                 required
                 className="text-(--clr-text-light) border-(--clr-border-dark)
                   py-5 bg-(--clr-bg-dark) focus-visible:ring-(--clr-purple-light)"
