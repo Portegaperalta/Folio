@@ -17,7 +17,7 @@ import {
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
-import { useState } from "react"
+import React, { useState } from "react"
 import { Signup } from "../utils/Signup"
 
 export default function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
@@ -28,7 +28,7 @@ export default function SignupForm({ ...props }: React.ComponentProps<typeof Car
   const [error, setError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: SubmitEvent) => {
+  const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError("");
