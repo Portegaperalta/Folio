@@ -116,7 +116,9 @@ export default function SignupForm({ ...props }: React.ComponentProps<typeof Car
                 </Button>
                 <FieldDescription className="text-(--clr-text-light) px-6 text-center">
                   Already have an account?
-                  <Link href="/login">Sign in</Link>
+                  <Link href="/login" className="text-(--clr-purple-light) ml-1.5">
+                    Sign in
+                  </Link>
                 </FieldDescription>
               </Field>
             </FieldGroup>
