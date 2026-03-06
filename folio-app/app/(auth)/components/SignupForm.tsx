@@ -78,6 +78,7 @@ export default function SignupForm({ ...props }: React.ComponentProps<typeof Car
                 name="name"
                 type="text"
                 value={fullName}
+                onChange={(e) => setFullName(e.target.value)}
                 required
                 className="text-(--clr-text-light) border-(--clr-border-dark)
                   py-5 bg-(--clr-bg-dark) focus-visible:ring-(--clr-purple-light)"
@@ -95,6 +96,7 @@ export default function SignupForm({ ...props }: React.ComponentProps<typeof Car
                 name="email"
                 type="email"
                 value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 required
                 className="text-(--clr-text-light) border-(--clr-border-dark)
                   py-5 bg-(--clr-bg-dark) focus-visible:ring-(--clr-purple-light)"
@@ -112,6 +114,7 @@ export default function SignupForm({ ...props }: React.ComponentProps<typeof Car
                 name="password"
                 type="password"
                 value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 required
                 className="text-(--clr-text-light) border-(--clr-border-dark)
                   py-5 bg-(--clr-bg-dark) focus-visible:ring-(--clr-purple-light)"
