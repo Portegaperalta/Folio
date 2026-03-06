@@ -63,9 +63,9 @@ export function LoginForm({
             alt="app logo" width={80}
             height={100}
           />
-          <CardTitle className="text-(--clr-text-light) text-[1.1rem]">
+          <CardTitle className="text-(--clr-text-light) text-[1.1rem] md:text-[1.4rem]">
             <h1>
-              Sign in to Folio
+              Sign in to your account
             </h1>
           </CardTitle>
         </CardHeader>
