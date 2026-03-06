@@ -17,7 +17,7 @@ import {
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
 import Image from "next/image"
-import { FormEvent, useState } from "react"
+import React, { FormEvent, useState } from "react"
 import { useRouter } from "next/navigation"
 import { login } from "@/app/(auth)/utils/Login"
 
@@ -32,7 +32,7 @@ export function LoginForm({
   const [error, setError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError("");
