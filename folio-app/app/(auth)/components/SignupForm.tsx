@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -14,8 +16,38 @@ import {
 } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
+import { useState } from "react"
+import { Signup } from "../utils/Signup"
 
 export default function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
+  const router = useRouter();
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: SubmitEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError("");
+
+    try {
+      await Signup({ name: fullName, email: email, password: password });
+      router.push("/");
+    }
+    catch (error) {
+      if (error instanceof Error) {
+        setError(error.message);
+      } else {
+        setError("Registration Failed");
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
   return (
     <Card {...props}>
       <CardHeader className="text-center place-items-center">
