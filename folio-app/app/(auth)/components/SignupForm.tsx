@@ -19,6 +19,7 @@ import Link from "next/link"
 import { useRouter } from "next/navigation"
 import React, { useState } from "react"
 import { Signup } from "../utils/Signup"
+import Image from "next/image"
 
 export default function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
   const router = useRouter();
@@ -51,14 +52,16 @@ export default function SignupForm({ ...props }: React.ComponentProps<typeof Car
   return (
     <Card {...props}>
       <CardHeader className="text-center place-items-center">
+        <Image
+          src="/folio-logo.svg"
+          alt="app logo" width={80}
+          height={100}
+        />
         <CardTitle className="text-(--clr-text-light) text-[1.1rem]">
           <h1>
             Create an account
           </h1>
         </CardTitle>
-        <CardDescription>
-          Enter your information below to create your account
-        </CardDescription>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit}>
