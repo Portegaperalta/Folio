@@ -8,6 +8,10 @@ export type LoginCredentialsDTO = {
   password: string
 }
 
+export type LoginResponse = {
+  message: string
+};
+
 export type RegisterCredentialsDTO = {
   name: string,
   email: string,

@@ -1,19 +1,10 @@
+import { LoginCredentialsDTO, LoginResponse } from '@/app/types/api';
 import api from '@/lib/api';
 import { AxiosError } from 'axios'
 
-export type LoginCredentialsDTO = {
-  Email: string,
-  Password: string,
-};
-
-export type LoginResponse = {
-  message: string
-};
-
-export async function login({ Email, Password }: LoginCredentialsDTO): Promise<LoginResponse> {
-
+export async function login({ email, password }: LoginCredentialsDTO): Promise<LoginResponse> {
   try {
-    const response = await api.post("/auth/login", { Email, Password });
+    const response = await api.post("/auth/login", { email, password });
     return response.data;
   }
   catch (error) {

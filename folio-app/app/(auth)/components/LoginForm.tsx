@@ -39,7 +39,7 @@ export function LoginForm({
     setMessage("");
 
     try {
-      const response = await login({ Email: email, Password: password });
+      const response = await login({ email: email, password: password });
       setMessage(response.message || "Login Successful");
       router.push("/");
     } catch (err) {
