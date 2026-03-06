@@ -19,6 +19,10 @@ export type RegisterCredentialsDTO = {
   phoneNumber?: string
 }
 
+export type RegisterResponse = {
+  message: string
+}
+
 export type FolderDTO = {
   id: string,
   name: string,
