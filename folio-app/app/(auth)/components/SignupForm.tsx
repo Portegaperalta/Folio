@@ -130,7 +130,7 @@ export default function SignupForm({ ...props }: React.ComponentProps<typeof Car
                 </Button>
                 {error ? (
                   <FieldDescription className="text-red-400 text-center">
-                    Login failed
+                    Sign Up Failed
                   </FieldDescription>
                 ) : null}
                 <FieldDescription className="text-(--clr-text-light) px-6 text-center">
