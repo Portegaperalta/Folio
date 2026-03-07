@@ -1,6 +1,7 @@
 import { X } from "lucide-react"
 import {
   Field,
+  FieldDescription,
   FieldGroup,
   FieldLabel,
   FieldSet,
@@ -8,6 +9,8 @@ import {
 import { Input } from "../../../../components/ui/input"
 import { Button } from "../../../../components/ui/button"
 import React, { Dispatch, SetStateAction, useState } from "react"
+import { FolderCreationDTO } from "@/app/types/api"
+import { CreateFolder } from "@/app/api/folder"
 
 type CreateFolderFormProps = {
   isFolderFormVisible: boolean,
@@ -20,6 +23,8 @@ export default function CreateFolderForm({
 }: CreateFolderFormProps) {
 
   const [folderName, setFolderName] = useState<string>("");
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [error, setError] = useState<string>("");
 
   const handleNameInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFolderName(e.currentTarget.value);
@@ -28,11 +33,24 @@ export default function CreateFolderForm({
   const quitForm = () => {
     setIsFolderFormVisible(false);
     setFolderName("");
+    setError("");
   }
 
-  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleFormSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
-    quitForm();
+    setIsSubmitting(true);
+
+    try {
+      const folderCreationDto: FolderCreationDTO = { name: folderName };
+      await CreateFolder(folderCreationDto);
+      setIsSubmitting(false);
+      quitForm();
+    }
+    catch (error) {
+      console.error(error);
+      setError("Something went wrong, please try again");
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -80,13 +98,19 @@ export default function CreateFolderForm({
               rounded-lg py-5 bg-(--clr-bg-dark) focus-visible:ring-(--clr-purple-light)"
             />
           </Field>
+          {error ? (
+            <FieldDescription className="text-red-400 text-center">
+              {error}
+            </FieldDescription>
+          ) : null}
           <Field>
             <Button
               type="submit"
+              disabled={isSubmitting}
               className="text-(--clr-text-light) bg-(--clr-purple-light) 
               rounded-lg hover:bg-(--clr-purple-light-hover) cursor-pointer"
             >
-              Create Folder
+              {isSubmitting ? "Creating Folder..." : "Create Folder"}
             </Button>
           </Field>
         </FieldGroup>
